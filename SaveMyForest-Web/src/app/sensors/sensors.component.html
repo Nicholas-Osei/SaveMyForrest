@@ -1,0 +1,63 @@
+<app-nav-bar></app-nav-bar>
+
+
+<div class="top">
+    <button class="addsensorbutton" (click)="GotoAddsensorPage()"> Add Sensor</button><br>
+</div>
+
+<div class="container">
+    <mat-table [dataSource]="dataSource">
+        <!-- Position Column -->
+        <ng-container matColumnDef="SensorId">
+            <mat-header-cell style="font-weight: bolder;font-size: 100%;" *matHeaderCellDef> SensorId </mat-header-cell>
+            <mat-cell *matCellDef="let element;let i = index"> {{i+1}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="Temperature">
+            <mat-header-cell style="font-weight: bolder;font-size: 100%;" *matHeaderCellDef> Temperature
+            </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.temp}} °C </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Humidity">
+            <mat-header-cell style="font-weight: bolder; font-size: 100%;" *matHeaderCellDef> Humidity
+            </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.hum}} %rH</mat-cell>
+        </ng-container>
+
+        <!-- Symbol action -->
+        <ng-container matColumnDef="Action">
+            <mat-header-cell id="lastCell" style="font-weight: bolder;font-size: 100%;" *matHeaderCellDef> Action </mat-header-cell>
+            <mat-cell *matCellDef="let element;let i = index">
+                <button class="noselect" (click)="DeleteSensor(i+1)">Delete</button>
+            </mat-cell>
+            <mat-cell>
+            </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+
+    </mat-table>
+
+
+    <div class="mat">
+        <mat-paginator #paginator [length]="Sensors.length" [pageSize]="5" [pageSizeOptions]="pageSizeOptions">
+        </mat-paginator>
+    </div>
+
+    <!-- <div *ngFor="let all of Sensors">
+        <div *ngIf="all.temp>=50">
+            hahahahahaha its working
+            {{CheckingFire(all.temp)}}
+        </div>
+    </div> -->
+
+    <!-- <div *ngIf="item.temp>50">
+        hahahahahaha its working
+        {{CheckingFire(item.temp)}}
+    </div> -->
+</div>

@@ -1,0 +1,9 @@
+<router-outlet></router-outlet>
+
+<div *ngFor="let all of Sensors;let i = index">
+
+    <div *ngIf="all.temp>=100">
+
+        {{CheckingFire(all.temp,'Sensor'+i)}}
+    </div>
+</div>

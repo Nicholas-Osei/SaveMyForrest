@@ -1,0 +1,160 @@
+mat-header-cell, mat-cell {
+  justify-content: center;
+} 
+
+
+
+.mat{ 
+  top :0;
+// margin:0 auto;
+margin-left: auto;
+margin-right: auto;
+
+
+}
+
+
+
+
+
+// .editbutton {
+//   margin-right: 25px;
+//   background-color: #007417d5;
+//   transition-duration: 0.4s;
+// }
+// .deletebutton {
+//   background-color: #b30000ab;
+//   transition-duration: 0.4s;
+// }
+
+// .editbutton:hover {
+//   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+// }
+
+// .deletebutton:hover {
+//   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+// }
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+$base-spacing-unit: 24px;
+$half-spacing-unit: $base-spacing-unit / 2;
+
+$color-alpha: #1772FF;
+$color-form-highlight: #c9c8c8;
+
+.table-class {
+	max-width: 1000px;
+	margin-right:auto;
+	margin-left:auto;
+	display:flex;
+	justify-content:center;
+  padding-bottom: 10px;;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+    color: white;
+    font-weight: bold;
+    padding-left: 22px;
+}
+
+
+
+
+button {
+	width: 80px;
+	height: 25px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	background: rgb(201, 11, 11);
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+}
+
+
+
+
+.addsensorbutton {
+  color: white;
+  font-family: "Big Caslon";
+  font-size: 20px;
+  background: #51a3e6;
+  width: 117px;
+  align-self: center;
+	height: 50px;
+  margin: auto;
+  padding: 10px;
+  margin-top: 20px;
+  
+
+}
+mat-header-row{
+  background-color: gray;
+  border: 15px;
+}
+
+button, button span {
+	transition: 200ms;
+}
+
+
+button svg {
+	width: 15px;
+	fill: #eee;
+}
+
+button:hover {
+	background: #ff3636;
+}
+
+.editbutton:hover {
+	background: #b6b6b6;
+}
+
+button:hover .text {
+	color: transparent;
+}
+
+button:hover .icon {
+	width: 70px;
+	border-left: none;
+	transform: translateX(0);
+}
+
+.addsensorbutton:hover {
+  background: #adadad;
+}
+
+button:focus {
+	outline: none;
+}
+
+
+.mat-option{
+  margin-left: 42%;
+  margin-top: auto;
+}
+@media screen and (max-width: 600px) {
+  mat-header-cell{
+  padding: 30px;
+    font-size: small
+  }
+  #lastCell{
+    padding-right: 45px;
+    padding-left: 10px;
+  }
+
+}
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";

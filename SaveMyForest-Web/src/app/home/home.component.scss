@@ -1,0 +1,42 @@
+.content {
+  height: 100%;
+  background-color: rgb(236, 243, 236);
+  overflow: hidden;
+}
+
+.title {
+  height: 1em;
+}
+
+span.title {
+  font-family: "Big Caslon", serif;
+  font-size: 3em;
+  font-weight: bold;
+  color: #4b4b4b;
+}
+
+.mat-grid-tile > div {
+  width: 100%;
+  height: 100%;
+}
+
+.heat-map {
+  cursor: pointer;
+  height: 20em;
+  background-image: url("../../assets/Images/map.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.hover {
+  transition: transform 0.5s;
+}
+
+.hover:hover {
+  transform: scale(1.02);
+}
+.container {
+  margin-top: 10%;
+}
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";

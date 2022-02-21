@@ -1,0 +1,28 @@
+<div class="content">
+    <app-nav-bar></app-nav-bar>
+
+    <div class="container">
+        <div class="row">
+            <div [routerLink]="['/heatmap']" class="col">
+                <span class="title">Heatmap</span>
+                <div class="heat-map hover"></div>
+            </div>
+            <div [routerLink]="['/sensors']" class="col">
+                <span class="title">Chart</span>
+                <canvas class="hover" baseChart width="600" [data]="chartData" [options]="chartOptions"
+                    [plugins]="chartPlugins" [type]="chartType">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div *ngFor="let all of Sensors;let i=index">
+
+    <div *ngIf="all.temp>=100">
+        {{CheckingFire(all.temp,'Sensor'+i)}}
+    </div>
+</div> -->
+<!-- <footer>
+    GEMAAKT DOOR NICHOLAS OSEI <br>
+    SMF GROEP(ANDRES, DAVID, YUNUS, NICHOLAS)
+</footer> -->
